@@ -1,104 +1,86 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>일룸</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-
+    <title>Responsive Web Design</title>
+    <style>
+        ul,li{margin:0; padding:0;}
+        ul{list-style:none;}
+        .contents-wrap{padding: 1em;}
+        .sed-dollar li{width: 100%;padding: 1.5em; box-sizing: border-box;float: left;border-left: 1px solid #ccc;border-bottom: ;}
+        .sed-dollar:after{display: block;clear: both;content: '';}
+        
+        .sed-dollar img{width: 100%;}
+        .sed-dollar .img-wrap{display: block;}
+        .sed-dollar .img-wrap{overflow: hidden;}
+        .sed-dollar .img-wrap:hover img{transform: scale(1.1,1.1)}
+        .sed-dollar .img-wrap img{transition: 0.6s}
+        .sed-dollar .title{display: block;font-weight: bold;padding: 1em 0;}
+        .sed-dollar.more{display: inline-block;border: 1px solid #FF9B70;background-color: #fff;color:#111;text-decoration: none;padding: 0.5em 1em; border-radius: 6px;margin-top: 1em;}
+        .sed-dollar.more:hover{background-color: #FF9B70; color: #fff;}
+        @media screen and (min-width:768px) {
+            .sed-dollar li(width:50%;)
+            .sed-dollar li:nth-child(2n+1){border-left: 1px solid transparent;}/*제이쿼리써야 움직일때 깨지는 것 막지만, 편법쓸수있다.*/
+            .sed-dollar li:nth-child(2n){border-left: 1px solid #ccc;}
+        }
+        @media screen and (min-width:1200px) {
+            .sed-dollar li{width: 33.333333%;}    
+            .sed-dollar li:nth-child(n){border-left: 1px solid #ccc;}
+            .sed-dollar li:nth-child(3n+1){border-left: 1px solid transparent;}
+        }
+    
+    
+    </style>
 </head>
-
 <body>
-    <section class="wrap">
-        <header class="header">
-            <div class="logo-wrap">
-                <h1 class="logo">
-                    <a href="#"><img src="images/logo.gif" alt="일룸 로고"></a>
-                </h1>
-                <ul class="icons-top">
-                    <li><a href="#" class="first">광고</a><img src="images/nav_tvcf.png" alt=""></li>
-                    <li><a href="#">대리점</a><img src="images/nav_agency_off.gif" alt=""></li>
-                    <li><a href="#">관심제품</a><img src="images/nav_like_off.gif" alt=""></li>
-                </ul>
-            </div>
-            <div class="menu-wrap">
-                <ul class="menu">
-                    <li><a href="#">제품</a></li>
-                    <li><a href="#">웹카달로그</a></li>
-                    <li><a href="#">신제품</a></li>
-                    <li><a href="#">구매후기</a></li>
-                    <li><a href="#">일룸소개</a></li>
-                </ul>
-            </div>
-        </header>
-        <div class="body">
-            <div class="slider-wrap">
-                <ul class="slider">
-                    <li>
-                        <a href="#"><img src="images/argian.jpg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/motion_bed.jpg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/wolke.jpg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/motion_bed_secret.jpg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/roy.jpg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/story.jpg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/stone_snow.jpg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/iloom_event.jpg" alt=""></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="-cen">
-                <div class="footer-contents">
+  <div class="tel-link">
+      <a href="tel:01088170224">전화걸기</a>
+      <a href="sms:01088170224">문자하기</a>
+  </div>
+   <div class="contents-wrap">
+       <ul class="sed-dollar">
+           <li>
+               <a href="#" clss="img-wrap"><img src="images/pic01.jpg" alt=""></a>
+               <div class="title">Interdum aenean</div>
+               <div class="desec">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</div>
+               <a href="#" class="more">more</a>
+           </li>
+           <li>
+               <a href="#" clss="img-wrap"><img src="images/pic02.jpg" alt=""></a>
+               <div class="title">Nulla amet dolore</div>
+               <div class="desec">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</div>
+               <a href="#" class="more">more</a>
+           </li>
+           <li>
+               <a href="#" clss="img-wrap"><img src="images/pic03.jpg" alt=""></a>
+               <div class="title">Tempus ullamcorper</div>
+               <div class="desec">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+</div>
+               <a href="#" class="more">more</a>
+           </li>
+           <li>
+               <a href="#" clss="img-wrap"><img src="images/pic04.jpg" alt=""></a>
+               <div class="title">Sed etiam facilis</div>
+               <div class="desec">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</div>
+               <a href="#" class="more">more</a>
+           </li>
+           <li>
+               <a href="#" clss="img-wrap"><img src="images/pic05.jpg" alt=""></a>
+               <div class="title">Feugiat lorem aenean</div>
+               <div class="desec">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</div>
+               <a href="#" class="more">more</a>
+           </li>
+           <li>
+               <a href="#" clss="img-wrap"><img src="images/pic06.jpg" alt=""></a>
+               <div class="title">
+Amet varius aliquam</div>
+               <div class="desec">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
 
-                    <span class="title">(주)일룸</span>
-
-                    <span class="ceo">대표이사 강성문</span>
-
-                    <adress>서울시 송파구 오금로 311</adress>
-                    <span>사업자등록번호 215-86-93600</span>
-
-                    <span>통신판매업신고 : 2009-서울송파-0069호</span>
-
-                    <span>부가통신사업신고필증 : 021129</span>
-
-                    <span class="email">이메일 : webmaster@iloom.com</span>
-
-                    <span class="copy-right">ⓒ 2017 iloom Inc</span> 
-
-                </div>
-            </div>
-        </footer>
-    </section>
-    <script>
-        $(function(){
-            $('.sliders').bxSlider({
-                auto: true
-            });
-        });
-
-    </script>
-
-
+</div>
+               <a href="#" class="more">more</a>
+           </li>
+       </ul>
+   </div> 
 </body>
-
 </html>
